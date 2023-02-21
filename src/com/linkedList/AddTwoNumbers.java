@@ -1,4 +1,7 @@
 package com.linkedList;
+
+import com.linkedList.common.ListNode;
+
 // Problem link : https://leetcode.com/problems/add-two-numbers/
 public class AddTwoNumbers
 {
@@ -58,20 +61,5 @@ public class AddTwoNumbers
             System.out.print(ans.val+" ");
             ans=ans.next;
         }
-    }
-}
-class ListNode
-{
-    int val;
-    ListNode next;
-    ListNode(){};
-    ListNode(int val)
-    {
-        this.val=val;
-    }
-    ListNode(int val,ListNode next)
-    {
-        this.val=val;
-        this.next=next;
     }
 }
