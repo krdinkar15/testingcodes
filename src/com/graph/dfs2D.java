@@ -1,16 +1,8 @@
 package com.graph;
 
-import java.util.Stack;
+import com.graph.common.Pair;
 
-class Pair
-{
-    int first,second;
-    Pair(int first,int second)
-    {
-        this.first=first;
-        this.second=second;
-    }
-}
+import java.util.Stack;
 public class dfs2D {
 
     static int dx[] = { 0, 1, 0, -1 };
