@@ -1,4 +1,4 @@
-package com.com.algo.dp;
+package com.dp;
 
 public class LCS {
     public static int longestCommonSubsequence(String text1, String text2) {

@@ -1,7 +1,7 @@
 package com.string;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 //Problem Link : https://leetcode.com/problems/group-anagrams
 public class GroupAnagrams {
     public static boolean checkAnagram(String s1,String s2)
@@ -59,5 +59,35 @@ public class GroupAnagrams {
         {
             System.out.println(ans.get(i));
         }
+        System.out.println("---------------");
+        List<List<String>> ans2=groupAnagrams2(new String[]{"eat","tan","ate","nat","bat"});
+        for(int i=0;i<ans2.size();i++)
+        {
+            System.out.println(ans2.get(i));
+        }
     }
+//    ---------------------------   Method 2--------------------------------------------------
+    private static List<List<String>> groupAnagrams2(String[] strs) {
+        if(strs.length==0)
+            return new ArrayList<List<String>>();
+        Map<String,List<String>> hm=new HashMap<>();
+        for(String str:strs)
+        {
+            char[] ch=str.toCharArray();
+            Arrays.sort(ch);
+            String sorted=new String(ch);
+            if(hm.containsKey(sorted))
+            {
+                hm.get(sorted).add(str);
+            }
+            else
+            {
+                List<String> lst=new ArrayList<String>();
+                lst.add(str);
+                hm.put(sorted,lst);
+            }
+        }
+        return new ArrayList<List<String>>(hm.values());
+    }
+
 }
