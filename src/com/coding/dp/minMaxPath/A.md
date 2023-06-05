@@ -9,8 +9,7 @@ patterns : https://leetcode.com/discuss/general-discussion/458695/Dynamic-Progra
 
 1. [MinimumPathSum.java](MinimumPathSum.java) 
 2. [Triangle.java](Triangle.java)
-
-
+3. [MaximalSquare.java](MaximalSquare.java)
 
 
 ### Hard
