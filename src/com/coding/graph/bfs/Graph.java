@@ -6,14 +6,14 @@ import java.util.List;
 public class Graph {
     private int n;
     private List<Integer>[] adj;
-    Graph(int n)
+    public Graph(int n)
     {
         this.n=n;
         adj=new LinkedList[n];
         for(int i=0;i<n;i++)
             adj[i]=new LinkedList<>();
     }
-    void addEdge(int src,int dest)
+    public void addEdge(int src,int dest)
     {
         adj[src].add(dest);
     }
