@@ -1,9 +1,9 @@
 package com.leetcode;
 
 
-import com.leetcode.classes.TreeNode;
+import com.coding.leetcode.classes.TreeNode;
 
-import java.util.*;
+import java.util.List;
 
 public class Solution {
 
@@ -26,15 +26,5 @@ public class Solution {
 
         return null;
     }
-
-
-
-
-
-
-
-
-
-
 
 }

@@ -8,6 +8,7 @@ public class ForEachTest {
 		for(String s:lst) {
 			System.out.print(s);
 		}
+		System.out.println("\n-----------------------------");
 		lst.forEach(System.out::print);
 		lst.add(null);
 		System.out.println("\nAfter adding null");
