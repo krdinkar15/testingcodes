@@ -3,9 +3,10 @@ package com.learnJava.lamda;
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class Test2 {
+public class TestFilter {
     public static void main(String[] args) {
         List<String> strList= Arrays.asList("abc","abcd","ghi","mnop","p");
         long count=strList.stream().count();
@@ -33,5 +34,28 @@ public class Test2 {
         IntSummaryStatistics stats=distint.stream().mapToInt(x->x).summaryStatistics();
         System.out.println(stats);
 
+
+        final List<String> friends =
+                Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
+
+        final long countFriendsWithN=friends.stream().filter(s -> s.startsWith("N")).count();
+        System.out.println(countFriendsWithN);
+
+        final Predicate<String> filterN=name ->name.startsWith("N");
+        final long countFriendsWithN2=friends.stream().filter(filterN).count();
+        System.out.println(countFriendsWithN2);
+
+
+        System.out.println(friends.stream().map(String::toUpperCase).collect(Collectors.joining(", ")));
+
+        String name="Kamal";
+        name.chars().forEach(System.out::println); // It will print the ASCII character.
+        name.chars().forEach(TestFilter::printChar); // It prints Kamal
+
+    }
+
+    private static void printChar(int achar)
+    {
+        System.out.println((char) achar);
     }
 }
